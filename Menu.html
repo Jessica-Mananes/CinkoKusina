@@ -139,6 +139,34 @@
   .footer h2 { margin-bottom: 10px; font-size: 1.8rem; }
   .footer p { margin: 3px 0; font-size: 1rem; }
 
+.menu-btn,
+.back-btn {
+  display: inline-block;
+  position: fixed;
+  text-decoration: none;
+  font-weight: 600;
+  overflow: visible;
+}
+
+.menu-btn::after,
+.back-btn::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: 6px;
+  transform: translateX(-50%);
+  width: 0;
+  height: 2px;
+  background: #268728;
+  transition: width 0.3s ease;
+} 
+
+.menu-btn:hover::after,
+.back-btn:hover::after {
+  width: 75%;
+}
+
+
   @media(max-width:720px){
     .hero h1 { font-size: 34px; }
     .food-card img { width: 140px; height: 140px; }
@@ -167,7 +195,7 @@
 
 <div style="height:80px;"></div>
 
-<a href="#" class="menu-btn">BOOK NOW</a>
+<a href="reservation.html" class="menu-btn">BOOK NOW</a>
 
 <a href="javascript:history.back()" class="back-btn">BACK</a>
 
