@@ -5,154 +5,212 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>About – Cinko Kusina</title>
 
-  
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Caveat+Brush&family=Pacifico&display=swap" rel="stylesheet">
-
 
   <style>
-   body {
-  font-family: "Poppins", sans-serif;
-  background-color: #856136;
-  background-image: url("bg.png");
-  background-size: cover;
-  background-position: center;
-  color: #f8f8f8;
-}
+    body {
+      font-family: "Poppins", sans-serif;
+      background-color: #ffffff;
+      color: #333;
+    }
 
-/* Navbar */
-.navbar-custom {
-  background: linear-gradient(to right, #6d5228, #d4c7b5);
-}
+    /* NAVIGATION */
+    nav {
+      background: #ffffff;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      padding: 15px 50px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
 
-.nav-logo {
-  width: 75px;
-  height: 75px;
-  object-fit: cover;
-  border-radius: 50%;
-}
+    nav .logo {
+      font-size: 1.8rem;
+      font-weight: 700;
+      color: #4e3b19;
+    }
 
- .logo-text {
-  font-size: 3.5rem;
-  font-family: "Caveat Brush";
-  letter-spacing: 2px;
-  font-weight: 800;
-  color: #333333;
-}
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 30px;
+      margin: 0;
+      padding: 0;
+    }
 
-    .logo-text span {
-  font-family: "Pacifico", cursive;   
-  background: linear-gradient(to right, #6a726a, #7ae6a4);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  font-size: 2.5rem;
-}
+    nav ul li a {
+      text-decoration: none;
+      color: #333;
+      font-weight: 500;
+      transition: 0.2s;
+    }
 
-/* About Section */
-.about-section {
-  padding: 90px 20px;
-  text-align: center;
-}
+    nav ul li a:hover {
+      color: #4e3b19;
+    }
 
-.about-box {
-  background: rgba(255, 255, 255, 0.12);
-  padding: 45px;
-  border-radius: 22px;
-  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.25);
-  max-width: 900px;
-  margin: auto;
-  backdrop-filter: blur(5px);
-}
+    nav ul li:last-child a {
+      background: #4e3b19;
+      color: #ffffff;
+      padding: 8px 16px;
+      border-radius: 20px;
+    }
 
-/* Title */
-.about-title {
-  font-size: 2.6rem;
-  font-weight: 800;
-  margin-bottom: 25px;
-  color: #2e700f;
-  text-shadow: 0 2px 3px rgba(252, 248, 248, 0.967);
-}
+    /* SECTION STYLES */
+    .hero-title {
+      font-size: 2.6rem;
+      font-weight: 800;
+      margin-top: 50px;
+      margin-bottom: 20px;
+    }
 
-/* Paragraphs */
-.about-text {
-  font-size: 1.20rem;
-  line-height: 1.9;
-  color: #fbfbfb;
-  margin-bottom: 30px;
-  font-style: italic bold;
-  font-weight: 200;
- text-shadow: 0 2px 3px rgba(1, 1, 1, 0.951);
+    .section-title {
+      font-size: 2rem;
+      font-weight: 700;
+      margin-bottom: 15px;
+    }
 
+    .about-text {
+      font-size: 1.1rem;
+      line-height: 1.7;
+      color: #555;
+    }
 
-}
+    .team-section {
+      margin-top: 80px;
+      text-align: center;
+    }
 
-/* Button */
-.back-btn {
-  background: #3d3d3d;
-  color: white;
-  padding: 12px 35px;
-  border-radius: 30px;
-  font-size: 1.1rem;
-  text-decoration: none;
-  transition: 0.3s ease;
-  position:relative;
-}
+    .team-title {
+      font-size: 2rem;
+      font-weight: 700;
+      margin-bottom: 10px;
+    }
 
-.back-btn:hover {
-  transform: scale(1.07);
-  background: #262626;
-}
+    .team-text {
+      color: #555;
+      margin-bottom: 40px;
+      font-size: 1.1rem;
+    }
 
-.back-btn::after {
-  content: "";
-  position: absolute;
-  left: 50%;
-  bottom: 6px; 
-  transform: translateX(-50%);
-  width: 0%;
-  height: 3px;
-  background-color:#56df7f; 
-  transition: width 0.25s ease;
-  border-radius: 5px;
-}
+    .team-img {
+      width: 110px;
+      height: 110px;
+      object-fit: cover;
+      border-radius: 50%;
+      margin-bottom: 10px;
+    }
 
-.back-btn:hover::after {
-  width: 70%;
-}
+    .team-name {
+      font-weight: 600;
+      font-size: 1.1rem;
+    }
 
+    .team-role {
+      font-size: 0.9rem;
+      color: #777;
+    }
   </style>
 </head>
 
 <body>
 
-  <nav class="navbar navbar-custom px-4">
-    <a class="navbar-brand d-flex align-items-center" href="index.html">
-      <img src="cklogo.jpg" class="me-2 nav-logo">
-      <span class="logo-text"> C I N K O <span> KUSINA </span></span>
-    </a>
+  <!-- NAVIGATION -->
+  <nav>
+    <label class="logo">Cinko Kusina</label>
+    <ul>
+      <li><a href="frontpage.html">Home</a></li>
+      <li><a href="Menu.html">Menu</a></li>
+      <li><a href="aboutpage.html">About</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a href="reservation.html">Reserve now</a></li>
+    </ul>
   </nav>
 
-  <section class="about-section">
+  <!-- Header -->
+  <div class="container">
+    <h1 class="hero-title">Five Women. One Kitchen. Endless Filipino Flavors.</h1>
 
-    <div class="about-box">
-      <h1 class="about-title">Five Women. One Kitchen. Endless Filipino Flavors.</h1>
+    <img src="food2.jpg" class="img-fluid rounded mb-4" alt="Cinko Kusina Dish">
 
-      <p class="about-text">
-        Cinko Kusina is built by five passionate women who share the same love for modern Filipino cuisine.  
-        Our mission is to bring a fresh twist to the classic flavors we grew up with while staying true to the heart of Filipino cooking.  
-        Every dish we serve carries a story, a memory, and a taste of home – made with care, creativity and authenticity.
-      </p>
+    <p class="about-text">
+      Cinko Kusina is a modern Filipino restaurant founded by five passionate women who share a love for authentic Filipino flavors.
+      Every dish we serve reflects our dedication to preserving the taste of home while adding a fresh and creative twist.
+    </p>
+  </div>
 
-      <p class="about-text">
-        Our goal is to create a dining experience where tradition meets innovation.  
-        Whether it is a classic dish with a modern twist or a new creation inspired by Filipino culture,  
-        we take pride in offering food that brings comfort and joy to every customer.
-      </p>
+  <!-- Two Column Section -->
+  <div class="container my-5">
+    <div class="row align-items-center">
 
-      <a href="frontpage.html" class="back-btn">Back to Home</a>
+      <!-- Left text -->
+      <div class="col-md-6">
+        <h2 class="section-title">Modern Filipino Comfort Food</h2>
+        <p class="about-text">
+          Our mission is to bring the warmth of Filipino cooking into a modern dining experience.  
+          Whether it is a reimagined classic or a new dish inspired by Filipino culture, every plate is made with heart, tradition, and creativity.
+        </p>
+        <p class="about-text">
+          At Cinko Kusina, we believe food should be comforting, flavorful, and memorable.
+          We take pride in serving dishes that bring joy, connection, and a true taste of home.
+        </p>
+      </div>
+
+      <!-- Right image -->
+      <div class="col-md-6">
+        <img src="food1.jpg" class="img-fluid rounded" alt="Cinko Dish">
+      </div>
+
     </div>
+  </div>
 
-  </section>
+  <!-- Team Section -->
+  <div class="container team-section">
+    <h2 class="team-title">Meet the Team</h2>
+    <p class="team-text">The five amazing women behind Cinko Kusina.</p>
+
+    <div class="row justify-content-center">
+
+      <!-- Member 1 -->
+      <div class="col-6 col-md-2">
+        <img src="sica.jpg" class="team-img">
+        <p class="team-name">Founder 1</p>
+        <p class="team-role">Jessica Mananes</p>
+      </div>
+
+      <!-- Member 2 -->
+      <div class="col-6 col-md-2">
+        <img src="andeng.jpg" class="team-img">
+        <p class="team-name">Founder 2</p>
+        <p class="team-role">Andrea Concepcion</p>
+      </div>
+
+      <!-- Member 3 -->
+      <div class="col-6 col-md-2">
+        <img src="mary.jpg" class="team-img">
+        <p class="team-name">Founder 3</p>
+        <p class="team-role">Mary Grace Regala</p>
+      </div>
+
+      <!-- Member 4 -->
+      <div class="col-6 col-md-2">
+        <img src="brit.jpg" class="team-img">
+        <p class="team-name">Founder 4</p>
+        <p class="team-role">Taniah Versoza</p>
+      </div>
+
+      <!-- Member 5 -->
+      <div class="col-6 col-md-2">
+        <img src="arian.jpg" class="team-img">
+        <p class="team-name">Founder 5</p>
+        <p class="team-role">Arian Mance</p>
+      </div>
+
+    </div>
+  </div>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 
