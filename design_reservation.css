@@ -1,155 +1,148 @@
 body::before {
     content: "";
     position: fixed;
-    top: 0; 
+    top: 0;
     left: 0;
-    width: 100%; 
+    width: 100%;
     height: 100%;
-    background-image: url('bg.png');
+    background-color: rgb(65, 63, 63);
+    background: url('bgmenu.png');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     filter: blur(3px);
     z-index: -1;
 }
-.head-container {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 10px;
-    margin-top: 10px;
-}
 
+.head-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    text-align: center;
+    padding: 15px 0;
+}
 .h1 {
-    margin-eft: 20px;
-    font-size: 55px;
+    font-size: 60px;
     font-family: "Caveat Brush";
-    letter-spacing: 2px;
     font-weight: 800;
-    color: #080606;
-    margin: 20px;
+    color: #333333;
+    margin: 0;
 }
 
 .h2 {
-    font-family: "Pacifico", cursive;   
-    background: linear-gradient(to right, #1a1b1a, #cdf8cc);
+    font-family: "Pacifico", cursive;
+    background:  linear-gradient(to right, #6a726a, #7ae6a4);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     font-size: 45px;
-    letter-spacing: 4px;
+    letter-spacing: 3px;
     margin: 0;
 }
-h3 {
-    text-align: center;
-    font-family: 'Gothic';
-    font-size: 30px;
-    color: rgb(21, 34, 1);
-    margin-top: 600px;  
+.navbar-scrolled .h1,
+.navbar-scrolled .h2 {
+    color: white !important;
+    -webkit-text-fill-color: white !important;
+    background: none !important;
 }
+
 .center-panel {
     width: 75%;
-    max-width: 900px;
-    margin: 120px auto 60px auto;
+    height:500px;
+    max-width: 700px;
+    margin: 140px auto 60px auto;
     padding: 40px 50px;
-
-    background: rgba(133, 163, 100, 0.6);
+    background: rgba(93, 95, 90, 0.6);
     backdrop-filter: blur(10px);
     border-radius: 25px;
-
     border: 2px solid rgba(255, 255, 255, 0.4);
     box-shadow: 0 8px 25px rgba(0, 0, 0, 0.25);
 }
 
 .reservation-form {
-    margin: 600Spx;
     font-family: "Poppins";
 }
+
 td {
     font-size: 20px;
     font-family: Georgia;
-    color: rgb(10, 9, 9);
+    color: rgb(250, 238, 238);
     text-align: center;
 }
-label{
-    color:#020202;
+
+label {
+    color: black;
     font-size: 12px;
 }
-.form-control{
-    height:40px;
+
+.form-control {
+    height: 40px;
 }
+
 input, select {
     width: 100%;
     max-width: 500px;
     height: 40px;
     font-size: 12px;
     padding: 5px 10px;
-    box-sizing: border-box;
-    border-color: rgb(241, 241, 241);
     border-radius: 5px;
 }
+
 .form-control:hover,
 .form-select:hover {
-    border-color: rgb(28, 209, 43) ;
+    border-color: rgb(28, 209, 43);
     box-shadow: 0 0 10px rgba(16, 228, 33, 0.7);
     transform: scale(1.03);
-    transition: scale(1.2s);
+    transition: 0.2s;
 }
+
 .reservebtn {
     border: none;
     font-style: oblique;
     font-size: 25px;
-    width: 200px;
+    width: 300px;
     background-color: rgb(217, 233, 190);
-    padding: 8px 18px;
-    border-radius: 10px;
+    padding: 10px 20px;
+    border-radius: 18px;
     cursor: pointer;
-    position: center;
 }
+
 .reservebtn:hover {
-    background-color: rgb(6, 179, 20);
+    background-color:  rgb(28, 209, 43);
 }
+
 .prevbtn {
-    position: fixed ;
-    width: px;
-    top: 140px;
+    position: fixed;
+    top: 20px;
     left: 20px;
-    padding: 8px 18px;
+    padding: 10px 16px;
     background-color: rgb(93, 100, 75);
-    color: rgb(236, 236, 236);
-    border-radius: 10px;
-    font-size: 18px;
-    font-family: Georgia, serif;
+    color: white;
+    border-radius: 50%;
+    font-size: 22px;
+    font-weight: bold;
     text-decoration: none;
-    border: 0px solid rgb(6, 63, 25);
-     z-index: 9999;
+    z-index: 9999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 45px;
+    height: 45px;
+    transition: 0.3s;
 }
 
 .prevbtn:hover {
     background-color: rgb(28, 209, 43);
-    text-decoration: underline;
-    transform: scale(1.2s);
+    transform: scale(1.1);
 }
-body {
-    height: 3000px;
-    overflow-x: hidden;
-    padding-top: 150px;
-}
-.bg-image {
-    width: 100px;       
-    height: 100px;     
-    object-fit: cover;
-    border-radius: 100%;  
-    position: absolute;
-    top: 20px;           
-    z-index: -1;
-    filter: brightness(0.9);
-}
-.navbar{
+
+.navbar {
     transition: all 0.4s;
 }
-.navbar-scrolled {
-     background: linear-gradient(to right, #b5945f, #cabba5);
-    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.15);
-    height: 100px;
 
+.navbar-scrolled {
+    background: linear-gradient(to right, #4e4d4a, #cabba5);
+    box-shadow: 0 3px 10px rgba(0,0,0,0.2);
+    height: 80px;
 }
