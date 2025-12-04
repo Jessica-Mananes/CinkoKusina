@@ -14,6 +14,15 @@ body::before {
     z-index: -1;
 }
 
+/* LOGO - simple, matches your header layout */
+.logo {
+    height: 55px;
+    width: 55px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+/* keep your original head container styling */
 .head-container {
     width: 100%;
     display: flex;
@@ -23,6 +32,7 @@ body::before {
     text-align: center;
     padding: 15px 0;
 }
+
 .h1 {
     font-size: 60px;
     font-family: "Caveat Brush";
@@ -33,13 +43,12 @@ body::before {
 
 .h2 {
     font-family: "Pacifico", cursive;
-    background:  linear-gradient(to right, #6a726a, #7ae6a4);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+    color: #f1f1f1;
     font-size: 45px;
     letter-spacing: 3px;
     margin: 0;
 }
+
 .navbar-scrolled .h1,
 .navbar-scrolled .h2 {
     color: white !important;
@@ -145,4 +154,52 @@ input, select {
     background: linear-gradient(to right, #4e4d4a, #cabba5);
     box-shadow: 0 3px 10px rgba(0,0,0,0.2);
     height: 80px;
+}
+
+/* Dropdown opens on hover */
+.dropdown:hover .dropdown-menu {
+    display: block;
+    opacity: 1;
+    visibility: visible;
+}
+
+/* Smooth fade animation */
+.dropdown-menu {
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.2s ease-in-out;
+}
+
+
+/* ----------------- Page Loader styles ----------------- */
+#pageLoader {
+    position: fixed;
+    inset: 0;
+    display: none;              /* toggled by JS */
+    justify-content: center;
+    align-items: center;
+    background: rgba(0,0,0,0.45); /* semi-opaque overlay */
+    z-index: 99999;
+}
+
+/* inner loader content (spinner + text) */
+#pageLoader .loader-inner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+}
+
+/* spinner size override (Bootstrap spinner) */
+#pageLoader .spinner-border {
+    width: 4rem;
+    height: 4rem;
+    border-width: 0.35rem;
+}
+
+/* small text under spinner */
+#pageLoader .loader-text {
+    font-family: "Poppins", sans-serif;
+    font-size: 14px;
+    color: white;
 }
