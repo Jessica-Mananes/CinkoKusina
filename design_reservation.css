@@ -9,7 +9,7 @@ body::before {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    filter: blur(4px);
+    filter: blur(3px);
     z-index: -1;
 }
 .head-container {
@@ -17,24 +17,26 @@ body::before {
     align-items: center;
     justify-content: center;
     gap: 10px;
-    margin-top: 20px;
+    margin-top: 10px;
 }
 
-h1 {
-    font-size: 3.5rem;
+.h1 {
+    margin-eft: 20px;
+    font-size: 55px;
     font-family: "Caveat Brush";
     letter-spacing: 2px;
     font-weight: 800;
-    color: #333333;
+    color: #080606;
     margin: 20px;
 }
 
-h2 {
+.h2 {
     font-family: "Pacifico", cursive;   
-    background: linear-gradient(to right, #6a726a, #7ae6a4);
+    background: linear-gradient(to right, #1a1b1a, #cdf8cc);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    font-size: 2.5rem;
+    font-size: 45px;
+    letter-spacing: 4px;
     margin: 0;
 }
 h3 {
@@ -42,7 +44,20 @@ h3 {
     font-family: 'Gothic';
     font-size: 30px;
     color: rgb(21, 34, 1);
-    margin-top: 600px;   /* ← Adjust mo dito gaano kababa */
+    margin-top: 600px;  
+}
+.center-panel {
+    width: 75%;
+    max-width: 900px;
+    margin: 120px auto 60px auto;
+    padding: 40px 50px;
+
+    background: rgba(133, 163, 100, 0.6);
+    backdrop-filter: blur(10px);
+    border-radius: 25px;
+
+    border: 2px solid rgba(255, 255, 255, 0.4);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.25);
 }
 
 .reservation-form {
@@ -52,26 +67,32 @@ h3 {
 td {
     font-size: 20px;
     font-family: Georgia;
-    color: rgb(255, 255, 255);
-    text-shadow: 1px 1px 2px black;
+    color: rgb(10, 9, 9);
     text-align: center;
+}
+label{
+    color:#020202;
+    font-size: 12px;
+}
+.form-control{
+    height:40px;
 }
 input, select {
     width: 100%;
-    max-width: 400px;
+    max-width: 500px;
     height: 40px;
-    font-size: 15px;
+    font-size: 12px;
     padding: 5px 10px;
     box-sizing: border-box;
-    border-color: rgb(6, 63, 25);
+    border-color: rgb(241, 241, 241);
     border-radius: 5px;
 }
 .form-control:hover,
 .form-select:hover {
     border-color: rgb(28, 209, 43) ;
-    box-shadow: 0 0 10px rgba(27, 110, 34, 0.7);
+    box-shadow: 0 0 10px rgba(16, 228, 33, 0.7);
     transform: scale(1.03);
-    transition: sclae(1.2s);
+    transition: scale(1.2s);
 }
 .reservebtn {
     border: none;
@@ -80,27 +101,26 @@ input, select {
     width: 200px;
     background-color: rgb(217, 233, 190);
     padding: 8px 18px;
-    border-radius: 7px;
+    border-radius: 10px;
     cursor: pointer;
     position: center;
 }
 .reservebtn:hover {
-    background-color: rgb(19, 185, 33);
+    background-color: rgb(6, 179, 20);
 }
-
-
 .prevbtn {
     position: fixed ;
-    top: 100px;
+    width: px;
+    top: 140px;
     left: 20px;
     padding: 8px 18px;
-    background-color: rgb(217, 233, 190);
-    color: black;
-    border-radius: 7px;
-    font-size: 20px;
+    background-color: rgb(93, 100, 75);
+    color: rgb(236, 236, 236);
+    border-radius: 10px;
+    font-size: 18px;
     font-family: Georgia, serif;
     text-decoration: none;
-    border: 2px solid rgb(6, 63, 25);
+    border: 0px solid rgb(6, 63, 25);
      z-index: 9999;
 }
 
@@ -124,13 +144,12 @@ body {
     z-index: -1;
     filter: brightness(0.9);
 }
-
-
 .navbar{
-    transition: all 0.5s;
+    transition: all 0.4s;
 }
 .navbar-scrolled {
-    background-color: green;
+     background: linear-gradient(to right, #b5945f, #cabba5);
     box-shadow: 0 3px 10px rgba(0, 0, 0, 0.15);
+    height: 100px;
 
 }
